@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#fitting-three-gee-models-using-the-geeglm-function" id="toc-fitting-three-gee-models-using-the-geeglm-function" class="nav-link" data-scroll-target="#fitting-three-gee-models-using-the-geeglm-function">Fitting Three GEE Models using the geeglm Function</a></li>
   <li><a href="#qic" id="toc-qic" class="nav-link" data-scroll-target="#qic">QIC</a></li>
   <li><a href="#creation-of-new-dataset-for-the-gee-model-prediction" id="toc-creation-of-new-dataset-for-the-gee-model-prediction" class="nav-link" data-scroll-target="#creation-of-new-dataset-for-the-gee-model-prediction">Creation of New Dataset for the GEE Model Prediction</a></li>
-  <li><a href="#calculate-95-prediction-intervals-using-the-geeex-model-on-newasdrs" id="toc-calculate-95-prediction-intervals-using-the-geeex-model-on-newasdrs" class="nav-link" data-scroll-target="#calculate-95-prediction-intervals-using-the-geeex-model-on-newasdrs">Calculate 95% prediction intervals using the geeEx model on newASDRs</a></li>
+  <li><a href="#calculate-95-prediction-intervals-using-the-geear1-model-on-newasdrs" id="toc-calculate-95-prediction-intervals-using-the-geear1-model-on-newasdrs" class="nav-link" data-scroll-target="#calculate-95-prediction-intervals-using-the-geear1-model-on-newasdrs">Calculate 95% prediction intervals using the geeAr1 model on newASDRs</a></li>
   <li><a href="#evaluating-forecast-accuracy-mean-squared-error-for-gee-model-predictions" id="toc-evaluating-forecast-accuracy-mean-squared-error-for-gee-model-predictions" class="nav-link" data-scroll-target="#evaluating-forecast-accuracy-mean-squared-error-for-gee-model-predictions">Evaluating Forecast Accuracy: Mean Squared Error for GEE Model Predictions</a></li>
   </ul>
 </nav>
@@ -660,8 +660,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>newASDRs<span class="sc">$</span>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(geeAr1, <span class="at">newdata =</span> newASDRs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="calculate-95-prediction-intervals-using-the-geeex-model-on-newasdrs" class="level1">
-<h1>Calculate 95% prediction intervals using the geeEx model on newASDRs</h1>
+<section id="calculate-95-prediction-intervals-using-the-geear1-model-on-newasdrs" class="level1">
+<h1>Calculate 95% prediction intervals using the geeAr1 model on newASDRs</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate the model matrix for the GEE model terms on the newASDRs data</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>model_matrix_gee <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="fu">terms</span>(geeAr1), newASDRs)</span>
