@@ -1,0 +1,5 @@
+---
+title: "About"
+---
+
+PCA-GEE Modelling Mortality
